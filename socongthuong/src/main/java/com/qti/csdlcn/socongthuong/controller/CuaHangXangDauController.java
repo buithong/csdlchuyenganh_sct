@@ -40,7 +40,7 @@ public class CuaHangXangDauController {
 	private PageCuaHangXangDauRepository pagRepostory;
 	
 	//create
-	//demo github từ tài khoản fork
+	//demo github từ tài khoản fork  fggdfg
 	@PostMapping("/CuaHangXangDaus/create")
 	public CuaHangXangDau createCuaHangXangDau(@Valid @RequestBody CuaHangXangDau cuahangxd) {
 		System.out.println("Create CuaHangXangDau: " + cuahangxd.getTenCuaHang() + "...");
