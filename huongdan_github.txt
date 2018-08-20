@@ -1,0 +1,45 @@
+Github: Project được lưu miễn phí nhưng phải ở chế độ public còn nếu private phải nâng cấp lên gói Micro giá là 7USD/tháng
+Bitbucket: Được sử dụng chế độ private free nhưng giới hạn member là 5 (source tree để quản lý)
+================================================
+Chuẩn bị:
+1. Đăng kí tài khoản Github:  https://github.com
+2. Cài đặt Github for Windows(GFW) https://windows.github.com
+
+================================================
+Sử dụng:
+Github có 2 thể loại thế này:
+	- Tạo một kho lưu code (sau này gọi là respository) cho một project của mình (cần xác minh email)
+	- Tham gia vào một project nào đó.
+================================================
+- Đăng nhập GFW, clone dự án về thư mục gốc
+- Copy file bỏ vào thư mục gốc
+- Vào GFW, Nhập thông tin chú thích, sau đó commit file lên
+- Có thay đổi thì cứ copy vào, chú thích và commit lên
+================================================
+Tài khoản khác muốn sử dụng thì cứ vào respository root đó, có thể:
+	- Clone về
+	- Fork về (Tạo thành project của tk mình, có thể chỉnh sửa trực tiếp trên web rồi pull request để yêu cầu root cập nhật )
+	
+================================================
+Thêm thành viên vào team để làm việc nhóm
+
+Để thêm thành viên vào respository, Setting, Collaborators => nhập vào email hoặc username Github
+================================================
+Các khái niệm:
+
+Repository (repo): là nơi chưa source code.
+Remote: server online.
+Local: server local trên máy.
+Working copy: nơi làm việc trực tiếp trên máy local.
+================================================
+Thao tác cơ bản của 1 dev khi hoàn thành 1 tính năng:năng:
+
+Commit: Lưu các thay đổi từ thư mục đang làm việc (working coppy) vào server local (local repo)
+Push: Cập nhật các thay đổi từ server local ở máy(local repo) lên server online (remote repo)
+================================================
+Các thành viên trong team cần lấy về sử dụng cần làm các thao tác:
+
+Fetch: Để “đồng bộ” mọi thứ thay đổi mới nhất từ server online (remote repo) về server local (local repo) chúng ta sử dụng lệnh fetch ( git fetch)
+Pull: Sau đó để “áp dụng” các thay đổi đó vào source code đang sử dụng.tức là cập nhật từ server local (local repo) vào thư mục đang làm việc (working copy) (git pull)
+
+
