@@ -1,4 +1,4 @@
-Github: Project được lưu miễn phí nhưng phải ở chế độ public còn nếu private phải nâng cấp lên gói Micro giá là 7USD/tháng
+﻿Github: Project được lưu miễn phí nhưng phải ở chế độ public còn nếu private phải nâng cấp lên gói Micro giá là 7USD/tháng
 Bitbucket: Được sử dụng chế độ private free nhưng giới hạn member là 5 (source tree để quản lý)
 ================================================
 Chuẩn bị:
@@ -24,6 +24,7 @@ Tài khoản khác muốn sử dụng thì cứ vào respository root đó, có 
 Thêm thành viên vào team để làm việc nhóm
 
 Để thêm thành viên vào respository, Setting, Collaborators => nhập vào email hoặc username Github
+(Sau khi thêm thì có quyền upload, commit, ... )
 ================================================
 Các khái niệm:
 
