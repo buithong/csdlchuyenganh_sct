@@ -8,6 +8,7 @@ public class DLCNSoCongThuongApplication {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		//Demo github
 		SpringApplication.run(DLCNSoCongThuongApplication.class, args);
 
 	}
