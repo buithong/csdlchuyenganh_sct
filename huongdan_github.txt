@@ -1,5 +1,51 @@
-﻿Github: Project được lưu miễn phí nhưng phải ở chế độ public còn nếu private phải nâng cấp lên gói Micro giá là 7USD/tháng
-Bitbucket: Được sử dụng chế độ private free nhưng giới hạn member là 5 (source tree để quản lý)
+truyền token (hearder) cho các api chưa phân quyền
+Authorization: Bearer  eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNTM1NTEwMjUxLCJleHAiOjE1MzYxMTUwNTF9.bfjmwxj4UMDWTQ3CPBbLGNhUc0UXlAgrz-qQ6XeKXxijFpUUtYD68Ywg3Q5670iK2keOCbrK71fyWObJiLBv6g
+===============================
+api đăng ký:
+http://localhost:5000/api/auth/signup
+{
+	"name":"Bui Thong",
+	"username":"buithong",
+	"email":"vanthong124@gmail.com",
+	"password":"buithong"
+}
+{
+    "success": false,
+    "message": "Username is already taken!"
+}
+===============================
+api login:
+http://localhost:5000/api/auth/signin
+{
+	"usernameOrEmail":"buithong",
+	"password":"buithong"
+}
+{
+    "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNTM1NTEwMjUxLCJleHAiOjE1MzYxMTUwNTF9.bfjmwxj4UMDWTQ3CPBbLGNhUc0UXlAgrz-qQ6XeKXxijFpUUtYD68Ywg3Q5670iK2keOCbrK71fyWObJiLBv6g",
+    "tokenType": "Bearer"
+}
+==============================
+api user đang login:
+http://localhost:5000/api/user/me
+{
+    "id": 3,
+    "username": "buithong",
+    "name": "Bui Thong"
+}
+==============================
+api get thông tin user
+http://localhost:5000/api/users/buithong
+{
+    "id": 3,
+    "username": "buithong",
+    "name": "Bui Thong",
+    "joinedAt": "2018-08-23T01:20:39.759Z"
+}
+
+
+
+================================================
+Github: Project được lưu miễn phí nhưng phải ở chế độ public còn nếu private phải nâng cấp lên gói Micro giá là 7USD/tháng
 ================================================
 Chuẩn bị:
 1. Đăng kí tài khoản Github:  https://github.com
@@ -7,7 +53,7 @@ Chuẩn bị:
 
 ================================================
 Sử dụng:
-Github có 2 thể loại thế này:
+Github có 2 thể loại:
 	- Tạo một kho lưu code (sau này gọi là respository) cho một project của mình (cần xác minh email)
 	- Tham gia vào một project nào đó.
 ================================================
@@ -25,6 +71,7 @@ Thêm thành viên vào team để làm việc nhóm
 
 Để thêm thành viên vào respository, Setting, Collaborators => nhập vào email hoặc username Github
 (Sau khi thêm thì có quyền upload, commit, ... )
+
 ================================================
 Các khái niệm:
 
