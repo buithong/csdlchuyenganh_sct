@@ -22,10 +22,13 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.qti.csdlcn.sct.exception.BadRequestException;
 import com.qti.csdlcn.sct.model.CuaHangXangDau;
 
 import com.qti.csdlcn.sct.repository.CuaHangXangDauRepository;
 import com.qti.csdlcn.sct.repository.PageCuaHangXangDauRepository;
+import com.qti.csdlcn.sct.util.AppConstants;
 
 
 @CrossOrigin(origins = "http://localhost:8081")
@@ -87,6 +90,7 @@ public class CuaHangXangDauController {
 		public Page<CuaHangXangDau> getSearchAllCuaHangXangDaus(@PathVariable("pageNumber") Integer pageNumber, @PathVariable("pageSize") Integer pageSize,
 				@PathVariable("properties_sort") String properties_sort, @PathVariable("kieu") Integer kieu, @PathVariable("tencuahang") String tencuahang,
 				@PathVariable("iddaily") Integer iddaily) {
+			validatePageNumberAndSize(pageNumber, pageSize);
 			try {
 				
 				System.out.println("Get all paging DaiLyXangDaus...");
@@ -219,5 +223,15 @@ public class CuaHangXangDauController {
 
 		return new ResponseEntity<>("CuaHangXangDau has been deleted!", HttpStatus.OK);
 	}
+	
+	private void validatePageNumberAndSize(int page, int size) {
+        if(page < 0) {
+            throw new BadRequestException("Page number cannot be less than zero.");
+        }
+
+        if(size > AppConstants.MAX_PAGE_SIZE) {
+            throw new BadRequestException("Page size must not be greater than " + AppConstants.MAX_PAGE_SIZE);
+        }
+    }
 		
 }
